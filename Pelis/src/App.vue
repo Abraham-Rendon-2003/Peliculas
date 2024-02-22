@@ -41,7 +41,6 @@
       </div>
     </div>
     <div>
-      <!-- Modal de actualización -->
       <b-modal
         v-model="showUpdateModal"
         title="Actualizar película"
@@ -197,27 +196,55 @@ export default Vue.extend({
 </script>
 
 <style>
-.main {
-  display: flex;
-}
 .mainContainer {
   flex: 1;
+  padding: 20px; 
 }
+
+h1 {
+  font-size: 28px; 
+  color: #333;
+  margin-bottom: 20px; 
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end; 
+  margin-bottom: 20px; 
+}
+
 .moviesContainer {
   display: flex;
   flex-wrap: wrap;
-  padding: 0% 1% 1% 1%;
   justify-content: space-between;
+  padding: 0 20px; 
 }
+
 .cardContainer {
-  padding: 1%;
+  flex-basis: calc(33.33% - 20px); 
+  margin-bottom: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease; 
 }
-.buttonContainer {
-  display: flex;
-  justify-content: end;
-  padding: 1%;
+
+.cardContainer:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
-.searchBarContainer {
-  padding-right: 0.2%;
+
+.b-button {
+  margin-top: 10px; 
 }
+
+.b-modal {
+  max-width: 500px; 
+}
+
+.b-form-group {
+  margin-bottom: 20px; 
+}
+
+.b-button[type="submit"] {
+  margin-top: 20px;
+}
+
 </style>

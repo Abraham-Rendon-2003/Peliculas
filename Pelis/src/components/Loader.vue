@@ -2,7 +2,6 @@
     <form @submit.prevent="submit"
           class="vl-parent"
           ref="formContainer">
-        <!-- your form inputs goes here-->
         <label><input type="checkbox" v-model="fullPage">Full page?</label>
         <button type="submit">Login</button>
     </form>

@@ -7,6 +7,7 @@
             v-model="selected"
             :options="options"
             required
+            class="custom-select"
           ></b-form-select>
         </div>
         <div class="inputContainer">
@@ -48,8 +49,8 @@
       </div>
 
       <div class="input-group-append" v-if="selected">
-        <button class="btn btn-secondary" type="button" @click="search">
-          Buscar
+        <button class="btn btn-primary" type="button" @click="search">
+          <i class="fas fa-search"></i> Buscar
         </button>
       </div>
     </div>
@@ -113,8 +114,23 @@ export default {
 .optionsContainer {
   padding-right: 10px;
 }
-.dates {
-  display: flex;
-  flex-direction: row;
+
+.custom-select {
+  width: 200px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  margin-right: 70px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.fa-search {
+  margin-right: 5px;
 }
 </style>
